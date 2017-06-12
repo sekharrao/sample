@@ -1,0 +1,12 @@
+server:
+  port: 8000
+
+spring:
+  cloud:
+    stream:
+      bindings:
+        sourceChannel:
+          binder: rabbit
+          destination: source.exchange
+          contentType: application/json
+          group: test
