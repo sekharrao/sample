@@ -1,0 +1,11 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    stream:
+      bindings:
+        greetingChannel:
+          binder: rabbit
+          destination: greet.exchange
+          group: test

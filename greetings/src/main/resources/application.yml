@@ -1,0 +1,12 @@
+server:
+  port: 8000
+
+spring:
+  cloud:
+    stream:
+      bindings:
+        greetingChannel:
+          binder: rabbit
+          destination: greet.exchange
+          contentType: application/json
+          group: test
