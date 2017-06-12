@@ -1,10 +1,14 @@
 package com.tandem.greetings.domain;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class HelloMessage {
 	
 	private String greetings;
 	
-	public HelloMessage(String greetings){
+	@JsonCreator
+	public HelloMessage(@JsonProperty("greetings") String greetings){
 		this.greetings = greetings;
 	}
 
