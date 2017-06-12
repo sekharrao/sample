@@ -27,7 +27,7 @@ public class GreetingsController {
 	
 	@RequestMapping("/sendMessage")
 	public HelloMessage sendMessage(){
-		HelloMessage greetingMsg = new HelloMessage("Message for internal service.");
+		HelloMessage greetingMsg = new HelloMessage("Hello from pub/sub channel.");
 		gateway.generate(greetingMsg);
 		return greetingMsg;
 	}

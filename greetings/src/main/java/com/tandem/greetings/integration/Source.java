@@ -5,9 +5,9 @@ import org.springframework.messaging.MessageChannel;
 
 public interface Source {
 	
-	String CHANNEL_NAME = "sourceChannel";
+	String CHANNEL_NAME = "greetingChannel";
 
     @Output
-    MessageChannel sourceChannel();
+    MessageChannel greetingChannel();
 
 }
