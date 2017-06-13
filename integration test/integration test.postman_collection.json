@@ -1,0 +1,55 @@
+{
+	"variables": [],
+	"info": {
+		"name": "centrica test",
+		"_postman_id": "eb0dd377-37cf-bed0-6f57-a0f7f727505b",
+		"description": "Test cases for centrica.\n1) two web services\n2) two web service communication on http\n3) two web service communication in pub/sub topology.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8000/greetings",
+			"request": {
+				"url": "localhost:8000/greetings",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Service for greetings. This will generate \"Hello World\" response."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/internal-greetings",
+			"request": {
+				"url": "localhost:8080/internal-greetings",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Service for greeting. This will generate \"Hello Management\" output."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/helloInternal",
+			"request": {
+				"url": "localhost:8000/helloInternal",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "One service calling another service, using http protocol."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/sendMessage",
+			"request": {
+				"url": "localhost:8000/sendMessage",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "One service calling to another using RabbitMQ"
+			},
+			"response": []
+		}
+	]
+}
