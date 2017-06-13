@@ -5,7 +5,10 @@ spring:
   cloud:
     stream:
       bindings:
-        greetingChannel:
+        input:
+          destination: greetings
           binder: rabbit
-          destination: greet.exchange
-          group: test
+        output:
+          destination: response
+          binder: rabbit
+          contentType: application/json
